@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Space) && m_animator.GetBool("isGround"))
         {
-            m_animator.SetFloat("speedY", 0.01f);
+            m_animator.SetFloat("speedY", 0.02f);
             m_animator.SetBool("isGround", false);
         }
 
