@@ -2,15 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class RayLigth : MonoBehaviour {
+public class RayLightController : MonoBehaviour {
 
-    public Object lightPrefab, linePrefab;
+    private Object lightPrefab, linePrefab;
     public float maxDistance = 3f;
     private List<GameObject> lights;
     private GameObject line;
 
     public void Awake() {
         lights = new List<GameObject>();
+        lightPrefab = Resources.Load("Prefabs/Light");
+        linePrefab = Resources.Load("Prefabs/Line");
     }
 
     public void FixedUpdate() {
@@ -25,7 +27,7 @@ public class RayLigth : MonoBehaviour {
                 foreach (RaycastHit2D hit in rayHits) {
                     if (hit.collider.gameObject.tag == "Enemy") {
                         // Matar al enemigo
-                        hit.collider.gameObject.SendMessage("kill", null);
+                        hit.collider.gameObject.SendMessage("Kill", null);
                     }
                     if (hit.collider.gameObject.tag == "Obstacle") {
                         lineEnd = hit.point;
