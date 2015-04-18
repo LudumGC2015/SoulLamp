@@ -26,6 +26,9 @@ public class RayLightController : MonoBehaviour {
         if (lights.Count == 2 && Vector2.Distance(lights[0].transform.position, lights[1].transform.position) < maxDistance) {
             RaycastHit2D[] rayHits = Physics2D.LinecastAll(lights[0].transform.position, lights[1].transform.position, LayerMask.GetMask("RayCast"));
             Vector3 lineEnd = lights[1].transform.position;
+            foreach(GameObject light in lights) {
+                light.GetComponent<Animator>().SetBool("active", true);
+            }
             foreach (RaycastHit2D hit in rayHits)
             {
                 if (hit.collider.gameObject.tag == "Enemy")
