@@ -1,14 +1,17 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
-guid: ba680ba9296d3f544a359ac84a4684d1
-timeCreated: 1429374536
-=======
 guid: cf36ed70ce4ae3042b9a054084183d45
-timeCreated: 1429374523
->>>>>>> fe14b02e84359e1e960f6b0da04d4dab44c43892
+timeCreated: 1429378573
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Enemy_Sprite_0
+    21300002: Enemy_Sprite_1
+    21300004: Enemy_Sprite_2
+    21300006: Enemy_Sprite_3
+    21300008: Enemy_Sprite_4
+    21300010: Enemy_Sprite_5
+    21300012: Enemy_Sprite_6
+    21300014: Enemy_Sprite_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -31,18 +34,18 @@ TextureImporter:
   cubemapConvolutionSteps: 8
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -53,7 +56,87 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: Enemy_Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 110
+        width: 79
+        height: 100
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 110
+        width: 82
+        height: 100
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy_Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 111
+        width: 80
+        height: 97
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy_Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 110
+        width: 84
+        height: 100
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy_Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 10
+        width: 62
+        height: 76
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy_Sprite_5
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 10
+        width: 64
+        height: 76
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy_Sprite_6
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 10
+        width: 64
+        height: 76
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy_Sprite_7
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 8
+        width: 64
+        height: 74
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
