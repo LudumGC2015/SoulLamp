@@ -22,6 +22,15 @@ public class RayLigth : MonoBehaviour {
                 if (rayHits.Length != 0) {
                     Debug.Log("Touched");
                 }
+
+                foreach (RaycastHit2D hit in rayHits) {
+                    if (hit.collider.gameObject.tag == "Enemy") {
+                        // Matar al enemigo
+                    }
+                    if (hit.collider.gameObject.tag == "Obstacle") {
+                        break;
+                    }
+                }
                 Debug.DrawLine(lights[0].transform.position, lights[1].transform.position, Color.blue, 2);
             }
 

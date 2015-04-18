@@ -10,17 +10,13 @@ public class SoulCollector : MonoBehaviour
 
     void Start()
     {   
-        string soulDisplay = "Souls: ";
-        string.Concat(soulDisplay, currentSouls.ToString());
-        soulCounter.text = soulDisplay;
+        soulCounter.text = "Souls: " + currentSouls;
     }
 
     public void ChangeSouls(int amount)
     {
         currentSouls += amount;
-        string soulDisplay = "Souls: ";
-        string.Concat(soulDisplay, currentSouls.ToString());
-        soulCounter.text = soulDisplay;
+        soulCounter.text = "Souls: " + currentSouls;
     }
 
 }
