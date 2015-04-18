@@ -5,7 +5,8 @@ using System.Collections.Generic;
 public class RayLightController : MonoBehaviour {
 
     private Object lightPrefab, linePrefab;
-    public float maxDistance = 3f;
+    public float maxDistance = 30f;
+    public bool existLine = false;
     private List<GameObject> lights;
     private GameObject line;
 
@@ -20,34 +21,44 @@ public class RayLightController : MonoBehaviour {
             Vector3 targetPosition = transform.position;
             GameObject lightObject = Instantiate(lightPrefab, new Vector3(targetPosition.x, targetPosition.y, 0), Quaternion.identity) as GameObject;
             lights.Add(lightObject);
-
-            if (lights.Count == 2 && Vector2.Distance(lights[0].transform.position, lights[1].transform.position) < maxDistance) {
-                RaycastHit2D[] rayHits = Physics2D.LinecastAll(lights[0].transform.position, lights[1].transform.position, LayerMask.GetMask("RayCast"));
-                Vector3 lineEnd = lights[1].transform.position;
-                foreach (RaycastHit2D hit in rayHits) {
-                    if (hit.collider.gameObject.tag == "Enemy") {
-                        // Matar al enemigo
-                        hit.collider.gameObject.SendMessage("Kill", null);
-                    }
-                    if (hit.collider.gameObject.tag == "Obstacle") {
-                        lineEnd = hit.point;
-                        break;
-                    }
+            Debug.Log(lights.Count);
+        }
+        if (lights.Count == 2 && Vector2.Distance(lights[0].transform.position, lights[1].transform.position) < maxDistance) {
+            RaycastHit2D[] rayHits = Physics2D.LinecastAll(lights[0].transform.position, lights[1].transform.position, LayerMask.GetMask("RayCast"));
+            Vector3 lineEnd = lights[1].transform.position;
+            foreach (RaycastHit2D hit in rayHits)
+            {
+                if (hit.collider.gameObject.tag == "Enemy")
+                {
+                    // Matar al enemigo
+                    hit.collider.gameObject.SendMessage("Kill", null);
                 }
+                if (hit.collider.gameObject.tag == "Obstacle")
+                {
+                    lineEnd = hit.point;
+                    break;
+                }
+            }
+            if (!existLine) {
                 line = Instantiate(linePrefab,
-                    new Vector3((lights[0].transform.position.x + lineEnd.x) / 2, (lights[0].transform.position.y + lineEnd.y) / 2, 0f), 
-                    Quaternion.identity) as GameObject;
+                new Vector3((lights[0].transform.position.x + lineEnd.x) / 2, (lights[0].transform.position.y + lineEnd.y) / 2, 0f),
+                Quaternion.identity) as GameObject;
+                existLine = true;
                 line.GetComponent<LineRenderer>().SetPosition(0, lights[0].transform.position);
                 line.GetComponent<LineRenderer>().SetPosition(1,
                     Vector2.Distance(lights[0].transform.position, lineEnd) * Vector3.Normalize(lineEnd - lights[0].transform.position) + lights[0].transform.position);
+                
             }
-            if (lights.Count == 3) {
-                Destroy(line);
-                foreach (GameObject light1 in lights) {
-                    Destroy(light1);
-                }
-                lights.Clear();
+           
+        }
+        if (lights.Count == 3)
+        {
+            Destroy(line);
+            foreach (GameObject light1 in lights)
+            {
+                Destroy(light1);
             }
+            lights.Clear();
         }
     }
 }
