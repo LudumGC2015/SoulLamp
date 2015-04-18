@@ -9,11 +9,9 @@ public class PlayerMovement : MonoBehaviour {
     public float jumpForce = 400f;
     [SerializeField]
     private LayerMask whatIsGround;
-    private Transform groundCheck;
     const float groundedRadius = .1f;
     public bool isGround;
     private Rigidbody2D rigidBody;
-    private bool facingRight = true;
 
     public void Move(float move, bool jump)
     {
@@ -29,7 +27,6 @@ public class PlayerMovement : MonoBehaviour {
 
     void Awake()
     {
-        groundCheck = transform.Find("GroundCheck");
         m_animator = GetComponent<Animator>();
         m_direccion = new Vector2(0.00f, 0.00f);
         rigidBody = GetComponent<Rigidbody2D>();
