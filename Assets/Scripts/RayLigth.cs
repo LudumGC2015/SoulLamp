@@ -4,13 +4,15 @@ using System.Collections.Generic;
 
 public class RayLigth : MonoBehaviour {
 
-    public Object lightPrefab, linePrefab;
+    private Object lightPrefab, linePrefab;
     public float maxDistance = 3f;
     private List<GameObject> lights;
     private GameObject line;
 
     public void Awake() {
         lights = new List<GameObject>();
+        lightPrefab = Resources.Load("Prefabs/Light");
+        linePrefab = Resources.Load("Prefabs/Line");
     }
 
     public void FixedUpdate() {
