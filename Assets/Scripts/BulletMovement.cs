@@ -8,4 +8,16 @@ public class BulletMovement : MonoBehaviour {
     void Start() {
         GetComponent<Rigidbody2D>().velocity = transform.right * m_speed;
 	}
+
+    // Se borra el objeto cuando ya no hace falta dibujarse
+    void OnBecameInvisible() {
+        Destroy(gameObject);
+    }
+
+    void OnCollisionEnter2D(Collision2D coll) {
+        if (coll.gameObject.tag == "Enemy") {
+            coll.gameObject.SendMessage("Kill");
+        }
+        Destroy(gameObject);
+    }
 }

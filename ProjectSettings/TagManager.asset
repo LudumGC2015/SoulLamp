@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Soul
   - Enemy
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -15,8 +16,13 @@ TagManager:
   - UI
   - 
   - 
+<<<<<<< HEAD
   - Sight
   - Ground
+=======
+  - RayCast
+  - 
+>>>>>>> fe14b02e84359e1e960f6b0da04d4dab44c43892
   - 
   - 
   - 
