@@ -1,9 +1,20 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 409042364b7d1eb4e81bdcd9e108f67e
 timeCreated: 1429385363
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
+=======
+guid: b49d19c5eff874c489efd05d2693191e
+timeCreated: 1429386165
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Skull_Sprite_0
+    21300002: Skull_Sprite_1
+    21300004: Skull_Sprite_2
+>>>>>>> 83ba8eb5aea752de7c55a3142aa078d1956a2487
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,14 +41,22 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
+<<<<<<< HEAD
     aniso: -1
+=======
+    aniso: 16
+>>>>>>> 83ba8eb5aea752de7c55a3142aa078d1956a2487
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 1
+=======
+  spriteMode: 2
+>>>>>>> 83ba8eb5aea752de7c55a3142aa078d1956a2487
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,7 +67,41 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
+<<<<<<< HEAD
     sprites: []
+=======
+    sprites:
+    - name: Skull_Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 14
+        width: 46
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Skull_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 11
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Skull_Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 9
+        width: 51
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+>>>>>>> 83ba8eb5aea752de7c55a3142aa078d1956a2487
   spritePackingTag: 
   userData: 
   assetBundleName: 

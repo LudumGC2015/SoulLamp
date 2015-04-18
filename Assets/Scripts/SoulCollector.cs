@@ -7,7 +7,6 @@ public class SoulCollector : MonoBehaviour
     private int currentSouls = 1;
     public Text soulCounter;
 
-
     void Start()
     {   
         soulCounter.text = "Souls: " + currentSouls;
@@ -18,5 +17,4 @@ public class SoulCollector : MonoBehaviour
         currentSouls += amount;
         soulCounter.text = "Souls: " + currentSouls;
     }
-
 }
