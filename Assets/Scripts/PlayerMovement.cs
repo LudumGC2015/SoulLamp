@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
 
+    public SoulCollector soulCollector;
     private Animator m_animator;
     private Vector2 m_direccion;
     public float maxSpeed = 6f;
