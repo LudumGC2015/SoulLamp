@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class RayLigth : MonoBehaviour {
+public class RayLightController : MonoBehaviour {
 
     private Object lightPrefab, linePrefab;
     public float maxDistance = 3f;
@@ -27,7 +27,7 @@ public class RayLigth : MonoBehaviour {
                 foreach (RaycastHit2D hit in rayHits) {
                     if (hit.collider.gameObject.tag == "Enemy") {
                         // Matar al enemigo
-                        hit.collider.gameObject.SendMessage("kill", null);
+                        hit.collider.gameObject.SendMessage("Kill", null);
                     }
                     if (hit.collider.gameObject.tag == "Obstacle") {
                         lineEnd = hit.point;
