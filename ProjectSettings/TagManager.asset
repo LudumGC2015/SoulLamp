@@ -3,26 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Soul
-  - Enemy
-  - Obstacle
+  tags: []
   layers:
-  - Default
-  - TransparentFX
-  - Ignore Raycast
-  - 
-  - Water
-  - UI
-  - 
-  - 
-<<<<<<< HEAD
-  - Sight
-  - Ground
-=======
-  - RayCast
-  - 
->>>>>>> fe14b02e84359e1e960f6b0da04d4dab44c43892
   - 
   - 
   - 
@@ -45,7 +27,14 @@ TagManager:
   - 
   - 
   - 
-  m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers: []
