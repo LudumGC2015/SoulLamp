@@ -43,34 +43,36 @@ public class PlayerMovement : MonoBehaviour {
         if (Physics2D.Linecast(new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z), new Vector3(transform.position.x, transform.position.y - 1.01f, transform.position.z), whatIsGround))
         {
             isGround = true;
+            m_animator.SetBool("isGround", true);
         }
         else
         {
             isGround = false;
+            m_animator.SetBool("isGround", false);
         }
         m_animator.SetBool("isGround", isGround);
         m_animator.SetFloat("speedY", rigidBody. velocity.y);
 
-        if (Input.GetKeyDown("a"))
+        if (Input.GetKeyDown("a") || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             transform.rotation = Quaternion.Euler(new Vector2(0.00f, 180.00f));
             m_animator.SetFloat("speedX", 0.02f);
             m_direccion.x = -1.00f;
         }
 
-        if (Input.GetKeyUp("a"))
+        if (Input.GetKeyUp("a") || Input.GetKeyUp(KeyCode.LeftArrow))
         {
             m_animator.SetFloat("speedX", 0.00f);
         }
 
-        if (Input.GetKeyDown("d"))
+        if (Input.GetKeyDown("d") || Input.GetKeyDown(KeyCode.RightArrow))
         {
             transform.rotation = Quaternion.Euler(new Vector2(0.00f, 0.00f));
             m_animator.SetFloat("speedX", 0.02f);
             m_direccion.x = 1.00f;            
         }
 
-        if (Input.GetKeyUp("d"))
+        if (Input.GetKeyUp("d") || Input.GetKeyUp(KeyCode.RightArrow))
         {
             m_animator.SetFloat("speedX", 0.00f);
         }
@@ -78,13 +80,11 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space) && m_animator.GetBool("isGround"))
         {
             m_animator.SetFloat("speedY", 0.02f);
-            m_animator.SetBool("isGround", false);
         }
 
         if (Input.GetKeyUp(KeyCode.Space))
         {
             m_animator.SetFloat("speedY", 0.00f);
-            m_animator.SetBool("isGround", true);
         }
 	
 	}
