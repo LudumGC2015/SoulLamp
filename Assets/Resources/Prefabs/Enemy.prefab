@@ -43,10 +43,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 411262}
   - 212: {fileID: 21218300}
-  - 50: {fileID: 5047604}
-  - 61: {fileID: 6168956}
   - 114: {fileID: 11424154}
   - 95: {fileID: 9566280}
+  - 50: {fileID: 5011546}
+  - 58: {fileID: 5889464}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -61,7 +61,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.30618417, y: .62559545, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 469818}
@@ -85,14 +85,14 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134854}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.157000005, y: .694999993, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 423146}
   m_Father: {fileID: 411262}
   m_RootOrder: 0
---- !u!50 &5047604
+--- !u!50 &5011546
 Rigidbody2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -103,10 +103,23 @@ Rigidbody2D:
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
+  m_IsKinematic: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!58 &5889464
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170274}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: .400000006}
+  serializedVersion: 2
+  m_Radius: .400000006
 --- !u!60 &6019334
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -148,19 +161,6 @@ PolygonCollider2D:
       - {x: 9.71148109, y: -.903563201}
       - {x: -.391648054, y: -.706516147}
       - {x: -.620601058, y: -.413713455}
---- !u!61 &6168956
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 170274}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .400000006}
-  serializedVersion: 2
-  m_Size: {x: .830529153, y: .734739304}
 --- !u!95 &9566280
 Animator:
   serializedVersion: 3
