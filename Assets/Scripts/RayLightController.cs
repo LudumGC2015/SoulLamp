@@ -49,6 +49,9 @@ public class RayLightController : MonoBehaviour {
                     lineEnd = hit.point;
                     break;
                 }
+                if (hit.collider.gameObject.tag == "Brazzier") {
+                    hit.collider.gameObject.SendMessage("Activate");
+                }
             }
             if (!existLine) {
                 line = Instantiate(linePrefab,

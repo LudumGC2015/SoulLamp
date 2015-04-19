@@ -9,6 +9,7 @@ TagManager:
   - Obstacle
   - Ground
   - SoulText
+  - Brazzier
   layers:
   - Default
   - TransparentFX
