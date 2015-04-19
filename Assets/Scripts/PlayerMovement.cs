@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
-    
+    private JumpAudioSourceController jASC;
     private Rigidbody2D rigidBody;
     private Animator m_animator;
     private Vector2 m_direccion;
@@ -31,11 +31,13 @@ public class PlayerMovement : MonoBehaviour {
             m_animator.SetBool("isGround", false);
             rigidBody.AddForce(new Vector2(0f, jumpForce));
             isGround = false;
+            jASC.PlayJumpSound();
         }
     }
 
     void Awake()
     {
+        jASC = GetComponentInChildren<JumpAudioSourceController>();
         m_animator = GetComponent<Animator>();
         m_direccion = new Vector2(0.00f, 0.00f);
         rigidBody = GetComponent<Rigidbody2D>();

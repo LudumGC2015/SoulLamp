@@ -4,10 +4,12 @@ using System.Collections;
 public class ShootBehaviour : MonoBehaviour {
 
     private Object bullet;
+    private AudioSource audioSource;
     public float timer = 0f;
 
 	// Use this for initialization
 	void Start () {
+        audioSource = GetComponent<AudioSource>();
         bullet = Resources.Load("Prefabs/NormalBullet");
 	}
 	
@@ -26,5 +28,6 @@ public class ShootBehaviour : MonoBehaviour {
         GameObject bul = Instantiate(bullet, transform.position, Quaternion.Euler(0f, transform.eulerAngles.y, 0f)) as GameObject;
         Debug.Log(gameObject);
         Physics2D.IgnoreCollision(bul.GetComponent<Collider2D>(), transform.parent.GetComponent<Collider2D>());
+        audioSource.Play();
     }
 }

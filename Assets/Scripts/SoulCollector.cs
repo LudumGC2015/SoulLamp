@@ -3,13 +3,15 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class SoulCollector : MonoBehaviour
-{
+{   
+    private SoulGetAudioSource sGAS;
     private int currentSouls = 10;
     public Text soulCounter;
     private Rigidbody2D rigidBody;
 
     void Start() 
     {
+        sGAS = GetComponentInChildren<SoulGetAudioSource>();
         soulCounter.text = "Souls: " + currentSouls;
         rigidBody = GetComponent<Rigidbody2D>();
     }
@@ -19,6 +21,7 @@ public class SoulCollector : MonoBehaviour
         if (other.gameObject.tag == "Soul")
         {
             ChangeSouls(1);
+            sGAS.PlayGetSoul();
             Destroy(other.gameObject);
         }
     }
