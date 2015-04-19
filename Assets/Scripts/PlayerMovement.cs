@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour {
     private Animator m_animator;
     private Vector2 m_direccion;
     public float maxSpeed = 6f;
-    public float jumpForce = 400f;
+    public float jumpForce = 280f;
     public bool invulnerable;
     [SerializeField]
     private LayerMask whatIsGround;
@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 
     public void Move(float move, bool jump)
     {
-        if (move == 0)
+        if (move == 0 && !invulnerable)
         {
             rigidBody.velocity = new Vector2(0f, rigidBody.velocity.y);
         }
@@ -51,12 +51,10 @@ public class PlayerMovement : MonoBehaviour {
         if (Physics2D.Linecast(new Vector3(transform.position.x, transform.position.y, transform.position.z), new Vector3(transform.position.x, transform.position.y - 0.1f, transform.position.z), whatIsGround))
         {
             isGround = true;
-            m_animator.SetBool("isGround", true);
         }
         else
         {
             isGround = false;
-            m_animator.SetBool("isGround", false);
         }
         m_animator.SetBool("isGround", isGround);
         m_animator.SetFloat("speedY", rigidBody. velocity.y);

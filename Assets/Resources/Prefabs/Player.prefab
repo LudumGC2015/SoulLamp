@@ -29,6 +29,9 @@ GameObject:
   - 95: {fileID: 9515400}
   - 50: {fileID: 5094680}
   - 61: {fileID: 6114156}
+  - 114: {fileID: 11442732}
+  - 114: {fileID: 11431376}
+  - 114: {fileID: 11499848}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -106,6 +109,36 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11431376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c56031fac679cc4890cf6e7d6770d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
+--- !u!114 &11442732
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da8852d7bb8a8e4d983dbc96ccba5d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 6
+  jumpForce: 280
+  invulnerable: 0
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 512
+  isGround: 0
 --- !u!114 &11486156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,6 +150,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623bde6f6cb2ea14d9466437e0c17cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &11499848
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 187814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539b61346d797d04088e61c29d792804, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soulCounter: {fileID: 11480578, guid: dfca7f250ad7770499eb1f0fc5957052, type: 2}
 --- !u!212 &21206128
 SpriteRenderer:
   m_ObjectHideFlags: 1

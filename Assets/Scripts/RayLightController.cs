@@ -12,7 +12,7 @@ public class RayLightController : MonoBehaviour {
     private GameObject line;
 
     public void Awake() {
-        soulCollector = GetComponent<SoulCollector>();
+        soulCollector = GameObject.FindGameObjectWithTag("Player").GetComponent<SoulCollector>();
         lights = new List<GameObject>();
         lightPrefab = Resources.Load("Prefabs/Light");
         linePrefab = Resources.Load("Prefabs/Line");
