@@ -17,7 +17,7 @@ public class ShootBehaviour : MonoBehaviour {
         {
             timer -= Time.deltaTime;
         } else if (Input.GetKeyDown(KeyCode.Mouse0)) {
-            timer = 2f;
+            timer = 1f;
             Shoot();
         }
 	}
