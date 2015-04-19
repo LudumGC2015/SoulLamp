@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class RayLightController : MonoBehaviour {
 
-    public SoulCollector soulCollector;
+    private SoulCollector soulCollector;
     private Object lightPrefab, linePrefab;
     public float maxDistance = 30f;
     public bool existLine = false;
@@ -12,6 +12,7 @@ public class RayLightController : MonoBehaviour {
     private GameObject line;
 
     public void Awake() {
+        soulCollector = GetComponent<SoulCollector>();
         lights = new List<GameObject>();
         lightPrefab = Resources.Load("Prefabs/Light");
         linePrefab = Resources.Load("Prefabs/Line");
