@@ -1,16 +1,14 @@
 fileFormatVersion: 2
-guid: 3cff03b1e2f28344a9f75c9835ff4cab
-timeCreated: 1429467032
+guid: 7d73b748be34f3246b5d5e8388c7f0e1
+timeCreated: 1429470469
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Ground_Sprite_0
-    21300002: Ground_Sprite_1
-    21300004: Ground_Sprite_2
-    21300006: Ground_Sprite_3
-    21300008: Ground_Sprite_4
-    21300010: Ground_Sprite_5
-    21300012: Ground_Sprite_6
+    21300000: Soul_Lamp_Logo_0
+    21300002: Soul_Lamp_Logo_1
+    21300004: Soul_Lamp_Logo_2
+    21300006: Soul_Lamp_Logo_3
+    21300008: Soul_Lamp_Logo_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -56,73 +54,53 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Ground_Sprite_0
+    - name: Soul_Lamp_Logo_0
       rect:
         serializedVersion: 2
-        x: 101
-        y: 329
-        width: 127
-        height: 36
+        x: 28
+        y: 170
+        width: 311
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ground_Sprite_1
+    - name: Soul_Lamp_Logo_1
       rect:
         serializedVersion: 2
-        x: 101
-        y: 282
-        width: 248
-        height: 36
+        x: 349
+        y: 170
+        width: 311
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ground_Sprite_2
+    - name: Soul_Lamp_Logo_2
       rect:
         serializedVersion: 2
-        x: 101
-        y: 227
-        width: 369
-        height: 36
+        x: 703
+        y: 54
+        width: 612
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ground_Sprite_3
+    - name: Soul_Lamp_Logo_3
       rect:
         serializedVersion: 2
-        x: 103
-        y: 171
-        width: 611
-        height: 36
+        x: 30
+        y: 49
+        width: 311
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ground_Sprite_4
+    - name: Soul_Lamp_Logo_4
       rect:
         serializedVersion: 2
-        x: 42
-        y: 23
-        width: 387
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ground_Sprite_5
-      rect:
-        serializedVersion: 2
-        x: 449
-        y: 24
-        width: 387
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Ground_Sprite_6
-      rect:
-        serializedVersion: 2
-        x: 860
-        y: 25
-        width: 387
-        height: 114
+        x: 349
+        y: 52
+        width: 311
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
