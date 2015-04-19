@@ -57,11 +57,10 @@ public class PatrolController : MonoBehaviour {
             rigidBody.velocity = Vector3.right * patrolSpeed;
             TurnAround();
         }
-        Debug.Log(rigidBody.velocity);
     }
 
     private void FollowPlayer() {
-        Vector2 velocity = new Vector2(player.transform.position.x - transform.position.x, 0f);
+        Vector2 velocity = player.transform.position - transform.position;
         GetComponent<Rigidbody2D>().velocity = velocity.normalized * followSpeed;
     }
 
@@ -75,8 +74,9 @@ public class PatrolController : MonoBehaviour {
         
     }
 
-    public void OnCollision2DStay(Collision2D coll) {
+    public void OnCollider2DStay(Collision2D coll) {
         if (coll.gameObject.tag == "Edge") {
+            Debug.Log("Collided");
             state = State.RETURNING;
         }
     }
