@@ -3,18 +3,18 @@ using System.Collections;
 
 public class SightController : MonoBehaviour {
 
-    private PatrolController patrolController;
+    public PatrolController patrolController;
 
-    void Awake()
-    {
-        patrolController = GetComponent<PatrolController>();
+    void Awake() {
+        patrolController = transform.parent.GetComponent<PatrolController>();
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
-            patrolController.SetPlayerSighted(true);
+            patrolController.state = PatrolController.State.FOLLOWING;
+            patrolController.player = other.gameObject;
         }
     }
 }
