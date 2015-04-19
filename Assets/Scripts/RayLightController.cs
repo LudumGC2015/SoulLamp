@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class RayLightController : MonoBehaviour {
 
+    private SoulCollector soulCollector;
     private Object lightPrefab, linePrefab;
     public float maxDistance = 30f;
     public bool existLine = false;
@@ -11,21 +12,31 @@ public class RayLightController : MonoBehaviour {
     private GameObject line;
 
     public void Awake() {
+        soulCollector = GetComponent<SoulCollector>();
         lights = new List<GameObject>();
         lightPrefab = Resources.Load("Prefabs/Light");
         linePrefab = Resources.Load("Prefabs/Line");
     }
 
     public void FixedUpdate() {
-        if (Input.GetKeyDown(KeyCode.Mouse0)) {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
             Vector3 targetPosition = transform.position;
             GameObject lightObject = Instantiate(lightPrefab, new Vector3(targetPosition.x, targetPosition.y, 0), Quaternion.identity) as GameObject;
             lights.Add(lightObject);
             Debug.Log(lights.Count);
+            if (lights.Count != 3)
+            {
+                soulCollector.ChangeSouls(-1);
+            }
         }
+
         if (lights.Count == 2 && Vector2.Distance(lights[0].transform.position, lights[1].transform.position) < maxDistance) {
             RaycastHit2D[] rayHits = Physics2D.LinecastAll(lights[0].transform.position, lights[1].transform.position, LayerMask.GetMask("RayCast"));
             Vector3 lineEnd = lights[1].transform.position;
+            foreach(GameObject light in lights) {
+                light.GetComponent<Animator>().SetBool("active", true);
+            }
             foreach (RaycastHit2D hit in rayHits)
             {
                 if (hit.collider.gameObject.tag == "Enemy")
@@ -54,6 +65,7 @@ public class RayLightController : MonoBehaviour {
         if (lights.Count == 3)
         {
             Destroy(line);
+            existLine = false;
             foreach (GameObject light1 in lights)
             {
                 Destroy(light1);

@@ -3,7 +3,12 @@ using System.Collections;
 
 public class SightController : MonoBehaviour {
 
-    public PatrolController patrolController;
+    private PatrolController patrolController;
+
+    void Awake()
+    {
+        patrolController = GetComponent<PatrolController>();
+    }
 
     void OnTriggerEnter(Collider other)
     {

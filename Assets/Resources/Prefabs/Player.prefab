@@ -30,6 +30,7 @@ GameObject:
   - 212: {fileID: 21246236}
   - 50: {fileID: 5099434}
   - 61: {fileID: 6148030}
+  - 114: {fileID: 11437914}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -124,6 +125,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   isGround: 0
+--- !u!114 &11437914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b590a97ef5bf89a409cd97832fd01626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 30
+  existLine: 0
 --- !u!114 &11445968
 MonoBehaviour:
   m_ObjectHideFlags: 1

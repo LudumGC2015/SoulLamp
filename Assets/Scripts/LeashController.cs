@@ -4,7 +4,12 @@ using System.Collections;
 public class LeashController : MonoBehaviour
 {
 
-    public PatrolController patrolController;
+    private PatrolController patrolController;
+
+    void Awake()
+    {
+        patrolController = GetComponent<PatrolController>();
+    }
 
     void OnTriggerExit(Collider other)
     {
