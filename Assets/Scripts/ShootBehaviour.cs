@@ -3,17 +3,28 @@ using System.Collections;
 
 public class ShootBehaviour : MonoBehaviour {
 
+    private Object bullet;
+    public float timer = 0f;
+
 	// Use this for initialization
 	void Start () {
+        bullet = Resources.Load("Prefabs/NormalBullet");
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        if (timer > 0f)
+        {
+            timer -= Time.deltaTime;
+        } else if (Input.GetKeyDown(KeyCode.Mouse0)) {
+            timer = 1f;
+            Shoot();
+        }
 	}
 
-    void Shoot(GameObject obj, Vector2 direction) {
-        Vector2 vectorAngle = new Vector2(0.0f, Vector2.Angle(new Vector2(1.0f, 0.0f), direction));
-        Instantiate(obj, transform.position, Quaternion.Euler(vectorAngle));
+    void Shoot() {
+        GameObject bul = Instantiate(bullet, transform.position, Quaternion.Euler(0f, transform.eulerAngles.y, 0f)) as GameObject;
+        Debug.Log(gameObject);
+        Physics2D.IgnoreCollision(bul.GetComponent<Collider2D>(), transform.parent.GetComponent<Collider2D>());
     }
 }

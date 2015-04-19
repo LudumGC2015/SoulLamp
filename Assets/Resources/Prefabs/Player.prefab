@@ -153,6 +153,19 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   isGround: 0
+--- !u!114 &11464210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b590a97ef5bf89a409cd97832fd01626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 30
+  existLine: 0
 --- !u!114 &11486156
 MonoBehaviour:
   m_ObjectHideFlags: 1

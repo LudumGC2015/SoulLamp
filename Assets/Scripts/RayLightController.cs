@@ -12,6 +12,7 @@ public class RayLightController : MonoBehaviour {
     private GameObject line;
 
     public void Awake() {
+
         soulCollector = GameObject.FindGameObjectWithTag("Player").GetComponent<SoulCollector>();
         lights = new List<GameObject>();
         lightPrefab = Resources.Load("Prefabs/Light");
@@ -19,7 +20,7 @@ public class RayLightController : MonoBehaviour {
     }
 
     public void FixedUpdate() {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             Vector3 targetPosition = transform.position;
             GameObject lightObject = Instantiate(lightPrefab, new Vector3(targetPosition.x, targetPosition.y, 0), Quaternion.identity) as GameObject;
