@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da8852d7bb8a8e4d983dbc96ccba5d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soulCollector: {fileID: 11445944}
   maxSpeed: 4
   jumpForce: 280
   whatIsGround:
@@ -107,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soulCounter: {fileID: 0}
+  rigidBody: {fileID: 5099434}
 --- !u!212 &21246236
 SpriteRenderer:
   m_ObjectHideFlags: 1
