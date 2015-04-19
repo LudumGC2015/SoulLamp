@@ -216,6 +216,10 @@ Prefab:
       propertyPath: m_FixedAngle
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 187814, guid: 08621e3e7d408ee47bd26de730a163f3, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08621e3e7d408ee47bd26de730a163f3, type: 2}
   m_IsPrefabParent: 0
@@ -365,21 +369,6 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!1 &344820611
-GameObject:
-  m_PrefabParentObject: {fileID: 167100, guid: 08621e3e7d408ee47bd26de730a163f3, type: 2}
-  m_PrefabInternal: {fileID: 61310681}
---- !u!114 &344820619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 344820611}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 623bde6f6cb2ea14d9466437e0c17cba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &426483252
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +453,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!114 &468633838
+--- !u!114 &468633838 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11480578, guid: dfca7f250ad7770499eb1f0fc5957052,
     type: 2}
@@ -843,6 +832,8 @@ GameObject:
   - 92: {fileID: 1199041488}
   - 124: {fileID: 1199041487}
   - 81: {fileID: 1199041486}
+  - 114: {fileID: 1199041491}
+  - 114: {fileID: 1199041492}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -915,6 +906,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &1199041491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1199041485}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c1385b6f7c7ef449a05fe36cf0b1d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_smooth: 5
+--- !u!114 &1199041492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1199041485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d311905bf87594089962da85718ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1799690754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,7 +943,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   patrolSpeed: 3
   followSpeed: 2
-  player: {fileID: 344820611}
+  player: {fileID: 0}
   state: 1
 --- !u!1 &1841839962
 GameObject:
