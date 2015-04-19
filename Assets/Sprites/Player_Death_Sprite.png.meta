@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: dc72b77f84fd9da40808d81126c59f19
+timeCreated: 1429447565
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Player_Death_Sprite_0
+    21300002: Player_Death_Sprite_1
+    21300004: Player_Death_Sprite_2
+    21300006: Player_Death_Sprite_3
+    21300008: Player_Death_Sprite_4
+    21300010: Player_Death_Sprite_5
+    21300012: Player_Death_Sprite_6
+    21300014: Player_Death_Sprite_8
+    21300016: Player_Death_Sprite_9
+    21300018: Player_Death_Sprite_11
+    21300020: Player_Death_Sprite_12
+    21300022: Player_Death_Sprite_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Player_Death_Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 172
+        width: 93
+        height: 100
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Player_Death_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 172
+        width: 93
+        height: 100
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Player_Death_Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 172
+        width: 92
+        height: 100
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Player_Death_Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 172
+        width: 93
+        height: 100
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Player_Death_Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 172
+        width: 93
+        height: 100
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Player_Death_Sprite_5
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 172
+        width: 93
+        height: 100
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Player_Death_Sprite_6
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 172
+        width: 93
+        height: 100
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Player_Death_Sprite_8
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 21
+        width: 158
+        height: 137
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Player_Death_Sprite_9
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 17
+        width: 127
+        height: 124
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Player_Death_Sprite_11
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 24
+        width: 93
+        height: 100
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Player_Death_Sprite_12
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 24
+        width: 93
+        height: 103
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Player_Death_Sprite_13
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 24
+        width: 151
+        height: 134
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
