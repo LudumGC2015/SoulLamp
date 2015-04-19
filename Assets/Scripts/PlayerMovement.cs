@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour {
     private Animator m_animator;
     private Vector2 m_direccion;
     private float maxSpeed = 4f;
-    private float jumpForce = 280f;
+    private float jumpForce = 350f;
     public bool invulnerable;
     [SerializeField]
     private LayerMask whatIsGround;
