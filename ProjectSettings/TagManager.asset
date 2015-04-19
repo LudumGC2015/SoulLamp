@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Obstacle
   - Ground
+  - SoulText
   layers:
   - Default
   - TransparentFX

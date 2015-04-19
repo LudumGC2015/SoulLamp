@@ -41,7 +41,6 @@ public class PlayerMovement : MonoBehaviour {
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
-	// Update is called once per frame
 	void Update () {
         float h = Input.GetAxis("Horizontal");
         bool jump = Input.GetKeyDown(KeyCode.Space);
