@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &132962
 GameObject:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 423146}
   - 60: {fileID: 6019334}
   - 114: {fileID: 11442080}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: LeashTracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 469818}
   - 60: {fileID: 6078268}
   - 114: {fileID: 11437924}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: SightTracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,8 @@ GameObject:
   - 95: {fileID: 9566280}
   - 50: {fileID: 5011546}
   - 58: {fileID: 5889464}
-  m_Layer: 0
+  - 114: {fileID: 11401876}
+  m_Layer: 8
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -60,10 +61,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170274}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 10.4499998, y: -.150000006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 423146}
   - {fileID: 469818}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,10 +76,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132962}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -.156999588, y: .694999933, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 469818}
+  m_Father: {fileID: 411262}
   m_RootOrder: 0
 --- !u!4 &469818
 Transform:
@@ -88,10 +90,9 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.157000005, y: .694999993, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 423146}
+  m_Children: []
   m_Father: {fileID: 411262}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!50 &5011546
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -178,6 +179,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11401876
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 170274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dc3584fb2e25534c827722a239b744b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11424154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -189,10 +201,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f9adbafcbdfd634ab564d3ba6be46c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseAndReturnSpeed: 5
-  patrolTime: 5
-  patrolDistance: 5
-  target: {fileID: 0}
+  patrolSpeed: 2
+  followSpeed: 2
+  player: {fileID: 187814, guid: 08621e3e7d408ee47bd26de730a163f3, type: 2}
+  state: 0
 --- !u!114 &11437924
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -204,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ad4dc82f7f8f5a489921f956b64d260, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolController: {fileID: 11424154}
+  patrolController: {fileID: 0}
 --- !u!114 &11442080
 MonoBehaviour:
   m_ObjectHideFlags: 1

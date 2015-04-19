@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class RayLightController : MonoBehaviour {
 
-    public SoulCollector soulCollector;
+    private SoulCollector soulCollector;
     private Object lightPrefab, linePrefab;
     public float maxDistance = 30f;
     public bool existLine = false;
@@ -12,18 +12,19 @@ public class RayLightController : MonoBehaviour {
     private GameObject line;
 
     public void Awake() {
+
+        soulCollector = GameObject.FindGameObjectWithTag("Player").GetComponent<SoulCollector>();
         lights = new List<GameObject>();
         lightPrefab = Resources.Load("Prefabs/Light");
         linePrefab = Resources.Load("Prefabs/Line");
     }
 
     public void FixedUpdate() {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             Vector3 targetPosition = transform.position;
             GameObject lightObject = Instantiate(lightPrefab, new Vector3(targetPosition.x, targetPosition.y, 0), Quaternion.identity) as GameObject;
             lights.Add(lightObject);
-            Debug.Log(lights.Count);
             if (lights.Count != 3)
             {
                 soulCollector.ChangeSouls(-1);

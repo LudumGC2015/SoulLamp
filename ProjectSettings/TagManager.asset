@@ -7,6 +7,8 @@ TagManager:
   - Soul
   - Enemy
   - Obstacle
+  - Ground
+  - SoulText
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - 
   - RayCast
   - Ground
-  - 
+  - Player
   - 
   - 
   - 

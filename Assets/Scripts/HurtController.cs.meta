@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: 539b61346d797d04088e61c29d792804
-timeCreated: 1429446694
+guid: 7c56031fac679cc4890cf6e7d6770d76
+timeCreated: 1429438884
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences:
-  - soulCounter: {fileID: 11480578, guid: dfca7f250ad7770499eb1f0fc5957052, type: 2}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

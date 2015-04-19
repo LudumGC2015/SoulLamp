@@ -2,22 +2,30 @@
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
-
-    public SoulCollector soulCollector;
+    
+    private Rigidbody2D rigidBody;
     private Animator m_animator;
     private Vector2 m_direccion;
     public float maxSpeed = 6f;
-    public float jumpForce = 400f;
+    public float jumpForce = 280f;
+    public bool invulnerable;
     [SerializeField]
     private LayerMask whatIsGround;
     const float groundedRadius = .1f;
     public bool isGround;
-    private Rigidbody2D rigidBody;
 
     public void Move(float move, bool jump)
     {
+        if (move == 0 && !invulnerable)
+        {
+            rigidBody.velocity = new Vector2(0f, rigidBody.velocity.y);
+        }
         m_animator.SetFloat("speedX", Mathf.Abs(move));
-        rigidBody.velocity = new Vector2(move * maxSpeed, rigidBody.velocity.y);
+        rigidBody.AddRelativeForce(new Vector2(move * maxSpeed * 10, 0f));
+        if (rigidBody.velocity.magnitude > maxSpeed)
+        {
+            rigidBody.AddRelativeForce(new Vector2(-move * maxSpeed * 10, 0f));
+        }
         if (isGround && jump)
         {
             m_animator.SetBool("isGround", false);
@@ -33,20 +41,20 @@ public class PlayerMovement : MonoBehaviour {
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
-	// Update is called once per frame
 	void Update () {
         float h = Input.GetAxis("Horizontal");
         bool jump = Input.GetKeyDown(KeyCode.Space);
-        Move(h, jump);
-        if (Physics2D.Linecast(new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z), new Vector3(transform.position.x, transform.position.y - 1.01f, transform.position.z), whatIsGround))
+        if (!invulnerable)
+        {
+            Move(h, jump);
+        }
+        if (Physics2D.Linecast(new Vector3(transform.position.x, transform.position.y, transform.position.z), new Vector3(transform.position.x, transform.position.y - 0.1f, transform.position.z), whatIsGround))
         {
             isGround = true;
-            m_animator.SetBool("isGround", true);
         }
         else
         {
             isGround = false;
-            m_animator.SetBool("isGround", false);
         }
         m_animator.SetBool("isGround", isGround);
         m_animator.SetFloat("speedY", rigidBody. velocity.y);

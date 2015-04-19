@@ -6,21 +6,16 @@ public class SoulCollector : MonoBehaviour
 {
     private int currentSouls = 10;
     public Text soulCounter;
-    public Rigidbody2D rigidBody;
+    private Rigidbody2D rigidBody;
 
-    void Start()
-    {   
+    void Start() 
+    {
         soulCounter.text = "Souls: " + currentSouls;
+        rigidBody = GetComponent<Rigidbody2D>();
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Enemy")
-        {
-            ChangeSouls(-1);
-            rigidBody.AddForce(new Vector2(-1000f, 5f), ForceMode2D.Impulse);
-        }
-
         if (other.gameObject.tag == "Soul")
         {
             ChangeSouls(1);
