@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: dc72b77f84fd9da40808d81126c59f19
-timeCreated: 1429447565
+timeCreated: 1429452803
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -68,8 +68,8 @@ TextureImporter:
         y: 172
         width: 93
         height: 100
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Player_Death_Sprite_1
       rect:
@@ -78,8 +78,8 @@ TextureImporter:
         y: 172
         width: 93
         height: 100
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Player_Death_Sprite_2
       rect:
@@ -88,8 +88,8 @@ TextureImporter:
         y: 172
         width: 92
         height: 100
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Player_Death_Sprite_3
       rect:
@@ -98,8 +98,8 @@ TextureImporter:
         y: 172
         width: 93
         height: 100
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Player_Death_Sprite_4
       rect:
@@ -108,8 +108,8 @@ TextureImporter:
         y: 172
         width: 93
         height: 100
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Player_Death_Sprite_5
       rect:
@@ -118,8 +118,8 @@ TextureImporter:
         y: 172
         width: 93
         height: 100
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Player_Death_Sprite_6
       rect:
@@ -128,8 +128,8 @@ TextureImporter:
         y: 172
         width: 93
         height: 100
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Player_Death_Sprite_8
       rect:
@@ -138,8 +138,8 @@ TextureImporter:
         y: 21
         width: 158
         height: 137
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Player_Death_Sprite_9
       rect:
@@ -148,8 +148,8 @@ TextureImporter:
         y: 17
         width: 127
         height: 124
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Player_Death_Sprite_11
       rect:
@@ -158,8 +158,8 @@ TextureImporter:
         y: 24
         width: 93
         height: 100
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Player_Death_Sprite_12
       rect:
@@ -168,8 +168,8 @@ TextureImporter:
         y: 24
         width: 93
         height: 103
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: Player_Death_Sprite_13
       rect:
@@ -178,8 +178,8 @@ TextureImporter:
         y: 24
         width: 151
         height: 134
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

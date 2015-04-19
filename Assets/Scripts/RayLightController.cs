@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class RayLightController : MonoBehaviour {
-
+    private SoulLinkAudioController sLAC;
     private SoulCollector soulCollector;
     private Object lightPrefab, linePrefab;
     public float maxDistance = 30f;
@@ -12,7 +12,7 @@ public class RayLightController : MonoBehaviour {
     private GameObject line;
 
     public void Awake() {
-
+        sLAC = GetComponentInChildren<SoulLinkAudioController>();
         soulCollector = GameObject.FindGameObjectWithTag("Player").GetComponent<SoulCollector>();
         lights = new List<GameObject>();
         lightPrefab = Resources.Load("Prefabs/Light");
@@ -32,7 +32,7 @@ public class RayLightController : MonoBehaviour {
         }
 
         if (lights.Count == 2 && Vector2.Distance(lights[0].transform.position, lights[1].transform.position) < maxDistance) {
-            RaycastHit2D[] rayHits = Physics2D.LinecastAll(lights[0].transform.position, lights[1].transform.position, LayerMask.GetMask("RayCast"));
+            RaycastHit2D[] rayHits = Physics2D.LinecastAll(lights[0].transform.position, lights[1].transform.position, LayerMask.GetMask("RayCast", "Ground"));
             Vector3 lineEnd = lights[1].transform.position;
             foreach(GameObject light in lights) {
                 light.GetComponent<Animator>().SetBool("active", true);
@@ -44,10 +44,13 @@ public class RayLightController : MonoBehaviour {
                     // Matar al enemigo
                     hit.collider.gameObject.SendMessage("Kill", null);
                 }
-                if (hit.collider.gameObject.tag == "Obstacle")
+                if (hit.collider.gameObject.tag == "Ground")
                 {
                     lineEnd = hit.point;
                     break;
+                }
+                if (hit.collider.gameObject.tag == "Brazzier") {
+                    hit.collider.gameObject.SendMessage("Activate");
                 }
             }
             if (!existLine) {
@@ -58,6 +61,7 @@ public class RayLightController : MonoBehaviour {
                 line.GetComponent<LineRenderer>().SetPosition(0, lights[0].transform.position);
                 line.GetComponent<LineRenderer>().SetPosition(1,
                     Vector2.Distance(lights[0].transform.position, lineEnd) * Vector3.Normalize(lineEnd - lights[0].transform.position) + lights[0].transform.position);
+                sLAC.PlaySoulLink();
                 
             }
            
@@ -66,6 +70,7 @@ public class RayLightController : MonoBehaviour {
         {
             Destroy(line);
             existLine = false;
+            sLAC.StopSoulLink();
             foreach (GameObject light1 in lights)
             {
                 Destroy(light1);

@@ -13,18 +13,19 @@ public class PatrolController : MonoBehaviour {
 
     public float patrolSpeed;
     public float followSpeed;
-    private float currentPatrolLerpTime; 
-    private float patrolDistance = 2f;
+    public float patrolDistance = 1f;
     private Vector3 patrolStartPosition;
     private Vector3 patrolEndPosition;
     public GameObject player;
+    private Rigidbody2D rigidBody;
     public State state;
 
     public void Start() {
         patrolStartPosition = transform.position;
         patrolEndPosition = transform.position - new Vector3(1f, 0f, 0f) * patrolDistance;
+        rigidBody = GetComponent<Rigidbody2D>();
         state = State.PATROLLING;
-        GetComponent<Rigidbody2D>().velocity = -Vector2.right * patrolSpeed;
+        rigidBody.velocity = -Vector2.right * patrolSpeed;
     }
 
     public void FixedUpdate() {
@@ -49,18 +50,17 @@ public class PatrolController : MonoBehaviour {
     
     private void Patrol() {
         if (transform.position.x >= patrolStartPosition.x) {
-            GetComponent<Rigidbody2D>().velocity = -Vector3.right * patrolSpeed;
+            rigidBody.velocity = -Vector3.right * patrolSpeed;
             TurnAround();
         }
         else if (transform.position.x <= patrolEndPosition.x) {
-            GetComponent<Rigidbody2D>().velocity = Vector3.right * patrolSpeed;
+            rigidBody.velocity = Vector3.right * patrolSpeed;
             TurnAround();
         }
-        
     }
 
     private void FollowPlayer() {
-        Vector2 velocity = new Vector2(player.transform.position.x - transform.position.x, 0f);
+        Vector2 velocity = player.transform.position - transform.position;
         GetComponent<Rigidbody2D>().velocity = velocity.normalized * followSpeed;
     }
 
@@ -72,6 +72,13 @@ public class PatrolController : MonoBehaviour {
         Vector2 velocity = new Vector2(patrolStartPosition.x - transform.position.x, 0f);
         GetComponent<Rigidbody2D>().velocity = velocity.normalized * patrolSpeed;
         
+    }
+
+    public void OnCollider2DStay(Collision2D coll) {
+        if (coll.gameObject.tag == "Edge") {
+            Debug.Log("Collided");
+            state = State.RETURNING;
+        }
     }
     
 }
