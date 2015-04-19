@@ -32,7 +32,7 @@ public class RayLightController : MonoBehaviour {
         }
 
         if (lights.Count == 2 && Vector2.Distance(lights[0].transform.position, lights[1].transform.position) < maxDistance) {
-            RaycastHit2D[] rayHits = Physics2D.LinecastAll(lights[0].transform.position, lights[1].transform.position, LayerMask.GetMask("RayCast"));
+            RaycastHit2D[] rayHits = Physics2D.LinecastAll(lights[0].transform.position, lights[1].transform.position, LayerMask.GetMask("RayCast", "Ground"));
             Vector3 lineEnd = lights[1].transform.position;
             foreach(GameObject light in lights) {
                 light.GetComponent<Animator>().SetBool("active", true);
@@ -44,7 +44,7 @@ public class RayLightController : MonoBehaviour {
                     // Matar al enemigo
                     hit.collider.gameObject.SendMessage("Kill", null);
                 }
-                if (hit.collider.gameObject.tag == "Obstacle")
+                if (hit.collider.gameObject.tag == "Ground")
                 {
                     lineEnd = hit.point;
                     break;
