@@ -311,6 +311,10 @@ Prefab:
       propertyPath: m_Mass
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11445944, guid: 08621e3e7d408ee47bd26de730a163f3, type: 2}
+      propertyPath: rigidBody
+      value: 
+      objectReference: {fileID: 2057759207}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08621e3e7d408ee47bd26de730a163f3, type: 2}
   m_IsPrefabParent: 0
@@ -852,7 +856,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5839928, guid: 1a4f8388f831c6c46bf01008713992cb, type: 2}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5839928, guid: 1a4f8388f831c6c46bf01008713992cb, type: 2}
       propertyPath: m_Radius
@@ -861,22 +865,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a4f8388f831c6c46bf01008713992cb, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1842756977 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 172142, guid: 1a4f8388f831c6c46bf01008713992cb, type: 2}
-  m_PrefabInternal: {fileID: 1842756976}
---- !u!114 &1842756978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1842756977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bca15234f483ac74988fe2b9354b2acc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soulCollector: {fileID: 449753533}
 --- !u!1 &1915342305
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,6 +949,11 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a121c87aa73f05d42bde8213494424ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!50 &2057759207 stripped
+Rigidbody2D:
+  m_PrefabParentObject: {fileID: 5099434, guid: 08621e3e7d408ee47bd26de730a163f3,
+    type: 2}
+  m_PrefabInternal: {fileID: 449753532}
 --- !u!4 &2127635250 stripped
 Transform:
   m_PrefabParentObject: {fileID: 475580, guid: 08621e3e7d408ee47bd26de730a163f3, type: 2}
