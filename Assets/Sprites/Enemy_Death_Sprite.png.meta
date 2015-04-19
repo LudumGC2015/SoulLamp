@@ -1,16 +1,14 @@
 fileFormatVersion: 2
-guid: 94d094e19239a6e4992631033f1c8510
-timeCreated: 1429455403
+guid: bb7d207edde935a428c700b06d0e5a7b
+timeCreated: 1429457394
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Player_Sprite_0
-    21300002: Player_Sprite_1
-    21300004: Player_Sprite_2
-    21300006: Player_Sprite_3
-    21300008: Player_Sprite_4
-    21300010: Player_Sprite_5
-    21300012: Player_Sprite_6
+    21300000: Enemy_Death_Sprite_0
+    21300002: Enemy_Death_Sprite_1
+    21300004: Enemy_Death_Sprite_2
+    21300006: Enemy_Death_Sprite_3
+    21300008: Enemy_Death_Sprite_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -56,73 +54,53 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: Player_Sprite_0
+    - name: Enemy_Death_Sprite_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 257
-        width: 93
-        height: 100
+        x: 40
+        y: 31
+        width: 77
+        height: 98
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Player_Sprite_1
+    - name: Enemy_Death_Sprite_1
       rect:
         serializedVersion: 2
-        x: 124
-        y: 257
-        width: 103
-        height: 96
+        x: 142
+        y: 29
+        width: 115
+        height: 125
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Player_Sprite_2
+    - name: Enemy_Death_Sprite_2
       rect:
         serializedVersion: 2
-        x: 238
-        y: 257
-        width: 83
-        height: 103
+        x: 282
+        y: 26
+        width: 110
+        height: 143
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Player_Sprite_3
+    - name: Enemy_Death_Sprite_3
       rect:
         serializedVersion: 2
-        x: 19
-        y: 132
-        width: 93
-        height: 100
+        x: 419
+        y: 26
+        width: 110
+        height: 125
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Player_Sprite_4
+    - name: Enemy_Death_Sprite_4
       rect:
         serializedVersion: 2
-        x: 125
-        y: 132
-        width: 103
-        height: 100
-      alignment: 7
-      pivot: {x: .5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Player_Sprite_5
-      rect:
-        serializedVersion: 2
-        x: 237
-        y: 132
-        width: 127
-        height: 100
-      alignment: 7
-      pivot: {x: .5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Player_Sprite_6
-      rect:
-        serializedVersion: 2
-        x: 25
-        y: 12
-        width: 79
-        height: 100
+        x: 566
+        y: 29
+        width: 78
+        height: 97
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

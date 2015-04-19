@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 420976}
   - 212: {fileID: 21206128}
   - 114: {fileID: 11486156}
-  - 114: {fileID: 11464210}
+  - 114: {fileID: 11413898}
   m_Layer: 10
   m_Name: OilLampHand
   m_TagString: Untagged
@@ -60,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .25, y: .5, z: -.00999999978}
+  m_LocalPosition: {x: .209999993, y: .560000002, z: -.00999999978}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 418360}
@@ -110,6 +110,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11413898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b590a97ef5bf89a409cd97832fd01626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 30
+  existLine: 0
 --- !u!114 &11431376
 MonoBehaviour:
   m_ObjectHideFlags: 1
