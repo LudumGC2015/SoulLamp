@@ -10,7 +10,8 @@ GameObject:
   - 4: {fileID: 420976}
   - 212: {fileID: 21206128}
   - 114: {fileID: 11486156}
-  m_Layer: 0
+  - 114: {fileID: 11413898}
+  m_Layer: 10
   m_Name: OilLampHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32,9 +33,9 @@ GameObject:
   - 114: {fileID: 11442732}
   - 114: {fileID: 11431376}
   - 114: {fileID: 11499848}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .25, y: .5, z: -.00999999978}
+  m_LocalPosition: {x: .209999993, y: .560000002, z: -.00999999978}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 418360}
@@ -89,9 +90,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .5}
+  m_Offset: {x: 0, y: .502449393}
   serializedVersion: 2
-  m_Size: {x: .930000007, y: 1}
+  m_Size: {x: .930000007, y: .970000029}
 --- !u!95 &9515400
 Animator:
   serializedVersion: 3
@@ -109,6 +110,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11413898
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 183882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b590a97ef5bf89a409cd97832fd01626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 30
+  existLine: 0
 --- !u!114 &11431376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -161,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539b61346d797d04088e61c29d792804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soulCounter: {fileID: 11480578, guid: dfca7f250ad7770499eb1f0fc5957052, type: 2}
+  soulCounter: {fileID: 0}
 --- !u!212 &21206128
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -185,7 +199,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300004, guid: e4ca0915b25e7a648a9688fefa6ae3cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21233436
