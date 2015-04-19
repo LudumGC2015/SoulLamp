@@ -10,6 +10,7 @@ TagManager:
   - Ground
   - SoulText
   - Brazzier
+  - Edge
   layers:
   - Default
   - TransparentFX

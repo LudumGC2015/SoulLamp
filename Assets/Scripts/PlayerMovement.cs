@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour {
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
-	void Update () {
+	void FixedUpdate () {
         float h = Input.GetAxis("Horizontal");
         bool jump = Input.GetKeyDown(KeyCode.Space);
         if (!invulnerable)
