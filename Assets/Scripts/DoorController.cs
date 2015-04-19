@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class DoorController : MonoBehaviour {
-
+    private AudioSource audioSource;
     public Vector2 closedMarker;
     public Vector2 openMarker;
     private Vector2 startMarker;
@@ -18,6 +18,7 @@ public class DoorController : MonoBehaviour {
         openMarker = new Vector2(closedMarker.x, closedMarker.y + 2f);
         startMarker = closedMarker;
         endMarker = closedMarker;
+        audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -46,6 +47,7 @@ public class DoorController : MonoBehaviour {
         startMarker = transform.position;
         endMarker = openMarker;
         startTime = Time.time;
+        audioSource.Play();
         moving = true;
     }
 
@@ -54,6 +56,7 @@ public class DoorController : MonoBehaviour {
         startMarker = transform.position;
         endMarker = closedMarker;
         startTime = Time.time;
+        audioSource.Play();
         moving = true;
     }
 
