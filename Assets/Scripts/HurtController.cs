@@ -15,7 +15,8 @@ public class HurtController : MonoBehaviour {
         if (other.gameObject.tag == "Enemy" && !invulnerable)
         {
             soulCollector.ChangeSouls(-1);
-            rigidBody.AddForce(new Vector2(-15f, 10f) * 20 * Time.deltaTime, ForceMode2D.Impulse);
+            rigidBody.velocity = new Vector2(0f, 0f);
+            rigidBody.AddForce(new Vector2(-8f*transform.right.x, 10f) * 20 * Time.deltaTime, ForceMode2D.Impulse);
             invulnerable = true;
             playerMovement.invulnerable = true;
             timer = 1.0f;

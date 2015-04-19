@@ -8,7 +8,8 @@ public class SoulCollector : MonoBehaviour
     public Text soulCounter;
     private Rigidbody2D rigidBody;
 
-    void Start() {   
+    void Start() 
+    {
         soulCounter.text = "Souls: " + currentSouls;
         rigidBody = GetComponent<Rigidbody2D>();
     }
