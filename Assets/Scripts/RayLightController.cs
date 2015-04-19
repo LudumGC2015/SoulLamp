@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class RayLightController : MonoBehaviour {
 
+    public SoulCollector soulCollector;
     private Object lightPrefab, linePrefab;
     public float maxDistance = 30f;
     public bool existLine = false;
@@ -17,12 +18,18 @@ public class RayLightController : MonoBehaviour {
     }
 
     public void FixedUpdate() {
-        if (Input.GetKeyDown(KeyCode.Mouse0)) {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
             Vector3 targetPosition = transform.position;
             GameObject lightObject = Instantiate(lightPrefab, new Vector3(targetPosition.x, targetPosition.y, 0), Quaternion.identity) as GameObject;
             lights.Add(lightObject);
             Debug.Log(lights.Count);
+            if (lights.Count != 3)
+            {
+                soulCollector.ChangeSouls(-1);
+            }
         }
+
         if (lights.Count == 2 && Vector2.Distance(lights[0].transform.position, lights[1].transform.position) < maxDistance) {
             RaycastHit2D[] rayHits = Physics2D.LinecastAll(lights[0].transform.position, lights[1].transform.position, LayerMask.GetMask("RayCast"));
             Vector3 lineEnd = lights[1].transform.position;

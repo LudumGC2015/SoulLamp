@@ -3,17 +3,15 @@ using System.Collections;
 
 public class DeathEnemy : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    Object soulPrefab;
+
+    void Awake() {
+        soulPrefab = Resources.Load("Prefabs/Soul");
+    }
 
     void Kill() {
         Destroy(gameObject);
+        GameObject soul = Instantiate(soulPrefab, transform.position, Quaternion.identity) as GameObject;
+        soul.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, 400f));
     }
 }
