@@ -7,13 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: LinkMaterial1
-<<<<<<< HEAD
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-=======
   m_Shader: {fileID: 10753, guid: 0000000000000000e000000000000000, type: 0}
   m_ShaderKeywords: _ALPHABLEND_ON
->>>>>>> 83ba8eb5aea752de7c55a3142aa078d1956a2487
   m_LightmapFlags: 5
   m_CustomRenderQueue: 3000
   m_SavedProperties:

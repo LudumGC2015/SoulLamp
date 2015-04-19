@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class SoulCollector : MonoBehaviour
 {
-    private int currentSouls = 1;
+    private int currentSouls = 10;
     public Text soulCounter;
     public Rigidbody2D rigidBody;
 
@@ -18,7 +18,7 @@ public class SoulCollector : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             ChangeSouls(-1);
-            rigidBody.AddForce(new Vector2(10f, 5f), ForceMode2D.Impulse);
+            rigidBody.AddForce(new Vector2(-1000f, 5f), ForceMode2D.Impulse);
         }
 
         if (other.gameObject.tag == "Soul")
