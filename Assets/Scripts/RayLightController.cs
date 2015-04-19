@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class RayLightController : MonoBehaviour {
-
+    private SoulLinkAudioController sLAC;
     private SoulCollector soulCollector;
     private Object lightPrefab, linePrefab;
     public float maxDistance = 30f;
@@ -12,7 +12,7 @@ public class RayLightController : MonoBehaviour {
     private GameObject line;
 
     public void Awake() {
-
+        sLAC = GetComponentInChildren<SoulLinkAudioController>();
         soulCollector = GameObject.FindGameObjectWithTag("Player").GetComponent<SoulCollector>();
         lights = new List<GameObject>();
         lightPrefab = Resources.Load("Prefabs/Light");
@@ -61,6 +61,7 @@ public class RayLightController : MonoBehaviour {
                 line.GetComponent<LineRenderer>().SetPosition(0, lights[0].transform.position);
                 line.GetComponent<LineRenderer>().SetPosition(1,
                     Vector2.Distance(lights[0].transform.position, lineEnd) * Vector3.Normalize(lineEnd - lights[0].transform.position) + lights[0].transform.position);
+                sLAC.PlaySoulLink();
                 
             }
            
@@ -69,6 +70,7 @@ public class RayLightController : MonoBehaviour {
         {
             Destroy(line);
             existLine = false;
+            sLAC.StopSoulLink();
             foreach (GameObject light1 in lights)
             {
                 Destroy(light1);
