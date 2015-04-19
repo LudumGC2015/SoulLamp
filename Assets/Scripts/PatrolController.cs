@@ -14,7 +14,7 @@ public class PatrolController : MonoBehaviour {
     public float patrolSpeed;
     public float followSpeed;
     private float currentPatrolLerpTime; 
-    private float patrolDistance = 2f;
+    public float patrolDistance = 2f;
     private Vector3 patrolStartPosition;
     private Vector3 patrolEndPosition;
     public GameObject player;
