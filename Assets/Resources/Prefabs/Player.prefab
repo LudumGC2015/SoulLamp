@@ -14,7 +14,9 @@ GameObject:
   - 50: {fileID: 5099434}
   - 61: {fileID: 6148030}
   - 114: {fileID: 11445944}
-  m_Layer: 0
+  - 114: {fileID: 11470378}
+  - 114: {fileID: 11461408}
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -89,7 +91,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da8852d7bb8a8e4d983dbc96ccba5d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soulCollector: {fileID: 11445944}
   maxSpeed: 4
   jumpForce: 280
   whatIsGround:
@@ -107,7 +108,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 539b61346d797d04088e61c29d792804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  soulCounter: {fileID: 11480578, guid: dfca7f250ad7770499eb1f0fc5957052, type: 2}
+  soulCounter: {fileID: 0}
+--- !u!114 &11461408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b590a97ef5bf89a409cd97832fd01626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 30
+  existLine: 0
+--- !u!114 &11470378
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c56031fac679cc4890cf6e7d6770d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
 --- !u!212 &21246236
 SpriteRenderer:
   m_ObjectHideFlags: 1

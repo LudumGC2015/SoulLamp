@@ -24,7 +24,6 @@ public class RayLightController : MonoBehaviour {
             Vector3 targetPosition = transform.position;
             GameObject lightObject = Instantiate(lightPrefab, new Vector3(targetPosition.x, targetPosition.y, 0), Quaternion.identity) as GameObject;
             lights.Add(lightObject);
-            Debug.Log(lights.Count);
             if (lights.Count != 3)
             {
                 soulCollector.ChangeSouls(-1);
