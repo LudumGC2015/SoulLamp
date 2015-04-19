@@ -2,8 +2,9 @@
 using System.Collections;
 
 public class PlayerMovement : MonoBehaviour {
-
-    public SoulCollector soulCollector;
+    
+    private Rigidbody2D rigidBody;
+    private SoulCollector soulCollector;
     private Animator m_animator;
     private Vector2 m_direccion;
     public float maxSpeed = 6f;
@@ -12,7 +13,6 @@ public class PlayerMovement : MonoBehaviour {
     private LayerMask whatIsGround;
     const float groundedRadius = .1f;
     public bool isGround;
-    private Rigidbody2D rigidBody;
 
     public void Move(float move, bool jump)
     {
@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour {
 
     void Awake()
     {
+        soulCollector = GetComponent<SoulCollector>();
         m_animator = GetComponent<Animator>();
         m_direccion = new Vector2(0.00f, 0.00f);
         rigidBody = GetComponent<Rigidbody2D>();

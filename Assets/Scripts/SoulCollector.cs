@@ -6,11 +6,12 @@ public class SoulCollector : MonoBehaviour
 {
     private int currentSouls = 10;
     public Text soulCounter;
-    public Rigidbody2D rigidBody;
+    private Rigidbody2D rigidBody;
 
     void Start()
     {   
         soulCounter.text = "Souls: " + currentSouls;
+        rigidBody = GetComponent<Rigidbody2D>();
     }
 
     void OnCollisionEnter2D(Collision2D other)
