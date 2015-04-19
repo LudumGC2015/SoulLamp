@@ -14,7 +14,7 @@ public class PatrolController : MonoBehaviour {
     public float patrolSpeed;
     public float followSpeed;
     private float currentPatrolLerpTime; 
-    private float patrolDistance = 1f;
+    private float patrolDistance = 2f;
     private Vector3 patrolStartPosition;
     private Vector3 patrolEndPosition;
     public GameObject player;
@@ -49,11 +49,14 @@ public class PatrolController : MonoBehaviour {
     
     private void Patrol() {
         if (transform.position.x >= patrolStartPosition.x) {
-            GetComponent<Rigidbody2D>().velocity = -Vector2.right * patrolSpeed;
+            GetComponent<Rigidbody2D>().velocity = -Vector3.right * patrolSpeed;
+            TurnAround();
         }
         else if (transform.position.x <= patrolEndPosition.x) {
-            GetComponent<Rigidbody2D>().velocity = Vector2.right * patrolSpeed;
+            GetComponent<Rigidbody2D>().velocity = Vector3.right * patrolSpeed;
+            TurnAround();
         }
+        
     }
 
     private void FollowPlayer() {
