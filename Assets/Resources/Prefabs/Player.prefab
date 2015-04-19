@@ -30,8 +30,10 @@ GameObject:
   - 212: {fileID: 21246236}
   - 50: {fileID: 5099434}
   - 61: {fileID: 6148030}
-  - 114: {fileID: 11437914}
-  m_Layer: 0
+  - 114: {fileID: 11445944}
+  - 114: {fileID: 11470378}
+  - 114: {fileID: 11461408}
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -135,46 +137,33 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b590a97ef5bf89a409cd97832fd01626, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
-  maxDistance: 30
-  existLine: 0
---- !u!114 &11445968
+  m_EditorClassIdentifier:
+  soulCounter: {fileID: 0}
+--- !u!114 &11461408
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143134}
+  m_GameObject: {fileID: 167100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 623bde6f6cb2ea14d9466437e0c17cba, type: 3}
+  m_Script: {fileID: 11500000, guid: b590a97ef5bf89a409cd97832fd01626, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!212 &21211048
-SpriteRenderer:
+  maxDistance: 30
+  existLine: 0
+--- !u!114 &11470378
+MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143134}
+  m_GameObject: {fileID: 167100}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300004, guid: e4ca0915b25e7a648a9688fefa6ae3cf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c56031fac679cc4890cf6e7d6770d76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: 0
 --- !u!212 &21246236
 SpriteRenderer:
   m_ObjectHideFlags: 1
