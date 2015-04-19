@@ -248,7 +248,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.57852554
+  orthographic size: 8.82585526
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -267,7 +267,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 204176386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: -.300000012, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1722589528}
@@ -331,7 +331,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 08621e3e7d408ee47bd26de730a163f3, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &449753533 stripped
+--- !u!114 &449753533
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11445944, guid: 08621e3e7d408ee47bd26de730a163f3,
     type: 2}
@@ -511,6 +511,18 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 2127635250}
+    - target: {fileID: 170274, guid: 5a3b94609bc2f0d419f0410d50cac043, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 134854, guid: 5a3b94609bc2f0d419f0410d50cac043, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 132962, guid: 5a3b94609bc2f0d419f0410d50cac043, type: 2}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5a3b94609bc2f0d419f0410d50cac043, type: 2}
   m_IsPrefabParent: 0
@@ -682,7 +694,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 519369266}
   m_RootOrder: 2
---- !u!114 &1250405653 stripped
+--- !u!114 &1250405653
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11480578, guid: dfca7f250ad7770499eb1f0fc5957052,
     type: 2}
@@ -880,11 +892,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472242, guid: 1a4f8388f831c6c46bf01008713992cb, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5839928, guid: 1a4f8388f831c6c46bf01008713992cb, type: 2}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5839928, guid: 1a4f8388f831c6c46bf01008713992cb, type: 2}
       propertyPath: m_Radius
@@ -893,7 +905,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a4f8388f831c6c46bf01008713992cb, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1842756977 stripped
+--- !u!1 &1842756977
 GameObject:
   m_PrefabParentObject: {fileID: 172142, guid: 1a4f8388f831c6c46bf01008713992cb, type: 2}
   m_PrefabInternal: {fileID: 1842756976}
