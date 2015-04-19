@@ -3,6 +3,7 @@ using System.Collections;
 
 public class HurtController : MonoBehaviour {
 
+    private AudioSource audioSource;
     private Transform transform;
     private Rigidbody2D rigidBody;
     private SoulCollector soulCollector;
@@ -15,6 +16,7 @@ public class HurtController : MonoBehaviour {
         if (other.gameObject.tag == "Enemy" && !invulnerable)
         {
             soulCollector.ChangeSouls(-1);
+            audioSource.Play();
             rigidBody.velocity = new Vector2(0f, 0f);
             rigidBody.AddForce(new Vector2(-8f*transform.right.x, 10f) * 20 * Time.deltaTime, ForceMode2D.Impulse);
             invulnerable = true;
@@ -24,6 +26,7 @@ public class HurtController : MonoBehaviour {
     }
 
 	void Start () {
+        audioSource = GetComponent<AudioSource>();
         playerMovement = GetComponent<PlayerMovement>();
         transform = GetComponent<Transform>();
         rigidBody = GetComponent<Rigidbody2D>();
