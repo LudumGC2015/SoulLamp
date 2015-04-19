@@ -10,7 +10,6 @@ public class PatrolController : MonoBehaviour {
         FOLLOWING,
         RETURNING
     }
-
     public float patrolSpeed;
     public float followSpeed;
     public float patrolDistance = 1f;
