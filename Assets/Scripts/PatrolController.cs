@@ -1,85 +1,74 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PatrolController : MonoBehaviour
-{
-    public float chaseAndReturnSpeed = 5f;
-    public float patrolTime = 5f;
-    public float patrolDistance = 1f;
-    public Transform target;
-    private float currentLerpTime;
-    private bool playerSighted = false;
-    private bool returningToPatrol = false;
-    private Vector3 oStartPos;
-    private Vector3 oEndPos;
-    private Vector3 startPos;
-    private Vector3 endPos;
-    //private Animator animator;
 
-    public void SetPlayerSighted(bool sight)
+
+public class PatrolController : MonoBehaviour {
+    public enum State
     {
-        playerSighted = sight;
-
+        PATROLLING,
+        FOLLOWING,
+        RETURNING
     }
 
-    public void ReturnToPatrol()
-    {
-        playerSighted = false;
-        returningToPatrol = true;
-        endPos = new Vector3(oEndPos.x, transform.position.y, 0);
+    public float patrolSpeed;
+    public float followSpeed;
+    private float currentPatrolLerpTime; 
+    private float patrolDistance = 1f;
+    private Vector3 patrolStartPosition;
+    private Vector3 patrolEndPosition;
+    public GameObject player;
+    public State state;
 
+    public void Start() {
+        patrolStartPosition = transform.position;
+        patrolEndPosition = transform.position - new Vector3(1f, 0f, 0f) * patrolDistance;
+        state = State.PATROLLING;
+        GetComponent<Rigidbody2D>().velocity = -Vector2.right * patrolSpeed;
     }
 
-    public void TurnAround()
-    {
-        if (transform.rotation.y == 0)
-        {
+    public void FixedUpdate() {
+        if (state == State.PATROLLING) {
+            Patrol();
+        }
+        else if (state == State.FOLLOWING) {
+            FollowPlayer();
+        }
+        else if (state == State.RETURNING) {
+            ReturnToPosition();
+        } 
+    }
+    public void TurnAround() {
+        if (transform.rotation.y == 0) {
             transform.Rotate(0, 180, 0);
         }
-        else
-        {
+        else {
             transform.Rotate(0, -180, 0);
         }
     }
-
-    void Start()
-    {
-        startPos = transform.position;
-        oStartPos = startPos;
-        endPos = transform.position - new Vector3(1f, 0f, 0f) * patrolDistance;
-        oEndPos = endPos;
-        currentLerpTime = 0f;
-        //animator = GetComponent<Animator>();
-    }
-
-    protected void Update()
-    {
-        if (playerSighted == true)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, chaseAndReturnSpeed * Time.deltaTime);
+    
+    private void Patrol() {
+        if (transform.position.x >= patrolStartPosition.x) {
+            GetComponent<Rigidbody2D>().velocity = -Vector2.right * patrolSpeed;
         }
-       // else if (returningToPatrol == true)
-   //     {
-//
-      //  }
-        else if (!playerSighted && !returningToPatrol)
-        {
-            //animator.SetFloat("movementX", startPos.x - endPos.x);
-            currentLerpTime += Time.deltaTime;
-            if (currentLerpTime > patrolTime)
-            {
-                currentLerpTime = patrolTime;
-            }
-            float perc = currentLerpTime / patrolTime;
-            transform.position = Vector3.Lerp(startPos, endPos, perc);
-            if (currentLerpTime == patrolTime)
-            {
-                TurnAround();
-                Vector3 swap = startPos;
-                startPos = endPos;
-                endPos = swap;
-                currentLerpTime = 0f;
-            }
+        else if (transform.position.x <= patrolEndPosition.x) {
+            GetComponent<Rigidbody2D>().velocity = Vector2.right * patrolSpeed;
         }
     }
+
+    private void FollowPlayer() {
+        Vector2 velocity = new Vector2(player.transform.position.x - transform.position.x, 0f);
+        GetComponent<Rigidbody2D>().velocity = velocity.normalized * followSpeed;
+    }
+
+    private void ReturnToPosition() {
+        if (Vector2.Distance(transform.position, patrolStartPosition) <= 0.1f)
+        {
+            state = State.PATROLLING;
+        }
+        Vector2 velocity = new Vector2(patrolStartPosition.x - transform.position.x, 0f);
+        GetComponent<Rigidbody2D>().velocity = velocity.normalized * patrolSpeed;
+        
+    }
+    
 }
