@@ -19,6 +19,10 @@ public class BulletMovement : MonoBehaviour {
             coll.gameObject.SendMessage("Kill");
             Destroy(gameObject);
         }
+        if (coll.gameObject.tag == "Brazzier")  {
+            coll.gameObject.SendMessage("Activate");
+
+        }
         
     }
 }
