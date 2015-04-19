@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21206128}
   - 114: {fileID: 11486156}
   - 114: {fileID: 11413898}
+  - 114: {fileID: 11464210}
   m_Layer: 10
   m_Name: OilLampHand
   m_TagString: Untagged
@@ -146,8 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da8852d7bb8a8e4d983dbc96ccba5d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 6
-  jumpForce: 280
   invulnerable: 0
   whatIsGround:
     serializedVersion: 2
@@ -155,7 +154,7 @@ MonoBehaviour:
   isGround: 0
 --- !u!114 &11464210
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183882}
@@ -177,6 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623bde6f6cb2ea14d9466437e0c17cba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
 --- !u!114 &11499848
 MonoBehaviour:
   m_ObjectHideFlags: 1
