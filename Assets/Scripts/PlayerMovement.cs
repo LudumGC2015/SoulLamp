@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour {
         float h = Input.GetAxis("Horizontal");
         bool jump = Input.GetKeyDown(KeyCode.Space);
         Move(h, jump);
-        if (Physics2D.Linecast(new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z), new Vector3(transform.position.x, transform.position.y - 1.01f, transform.position.z), whatIsGround))
+        if (Physics2D.Linecast(new Vector3(transform.position.x, transform.position.y - 1f, transform.position.z), new Vector3(transform.position.x, transform.position.y - 1.001f, transform.position.z), whatIsGround))
         {
             isGround = true;
             m_animator.SetBool("isGround", true);

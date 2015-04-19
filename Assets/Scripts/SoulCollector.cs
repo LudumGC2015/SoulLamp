@@ -21,7 +21,10 @@ public class SoulCollector : MonoBehaviour
             ChangeSouls(-1);
             rigidBody.AddForce(new Vector2(-1000f, 5f), ForceMode2D.Impulse);
         }
+    }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
         if (other.gameObject.tag == "Soul")
         {
             ChangeSouls(1);
