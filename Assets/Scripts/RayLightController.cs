@@ -57,6 +57,7 @@ public class RayLightController : MonoBehaviour {
         if (lights.Count == 3)
         {
             Destroy(line);
+            existLine = false;
             foreach (GameObject light1 in lights)
             {
                 Destroy(light1);

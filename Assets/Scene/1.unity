@@ -87,6 +87,23 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &70082502
+GameObject:
+  m_PrefabParentObject: {fileID: 167100, guid: 08621e3e7d408ee47bd26de730a163f3, type: 2}
+  m_PrefabInternal: {fileID: 449753532}
+--- !u!114 &70082508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 70082502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b590a97ef5bf89a409cd97832fd01626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 30
+  existLine: 0
 --- !u!1 &184427791
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,7 +372,7 @@ Transform:
   - {fileID: 583622100}
   - {fileID: 184427792}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &583622096
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +457,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 519369266}
   m_RootOrder: 3
+--- !u!1 &725090072
+GameObject:
+  m_PrefabParentObject: {fileID: 170274, guid: 5a3b94609bc2f0d419f0410d50cac043, type: 2}
+  m_PrefabInternal: {fileID: 791297526}
+--- !u!114 &725090079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 725090072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dc3584fb2e25534c827722a239b744b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &791297526
 Prefab:
   m_ObjectHideFlags: 0
@@ -949,12 +981,16 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a121c87aa73f05d42bde8213494424ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< HEAD
 --- !u!50 &2057759207 stripped
 Rigidbody2D:
   m_PrefabParentObject: {fileID: 5099434, guid: 08621e3e7d408ee47bd26de730a163f3,
     type: 2}
   m_PrefabInternal: {fileID: 449753532}
 --- !u!4 &2127635250 stripped
+=======
+--- !u!4 &2127635250
+>>>>>>> 83ba8eb5aea752de7c55a3142aa078d1956a2487
 Transform:
   m_PrefabParentObject: {fileID: 475580, guid: 08621e3e7d408ee47bd26de730a163f3, type: 2}
   m_PrefabInternal: {fileID: 449753532}
