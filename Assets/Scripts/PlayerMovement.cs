@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour {
     private Rigidbody2D rigidBody;
     private Animator m_animator;
     private Vector2 m_direccion;
-    public float maxSpeed = 6f;
+    public float maxSpeed = 4f;
     public float jumpForce = 280f;
     public bool invulnerable;
     [SerializeField]

@@ -4,6 +4,7 @@ using System.Collections;
 public class ShootBehaviour : MonoBehaviour {
 
     private Object bullet;
+    public float timer = 0f;
 
 	// Use this for initialization
 	void Start () {
@@ -12,7 +13,11 @@ public class ShootBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.Mouse0)) {
+        if (timer > 0f)
+        {
+            timer -= Time.deltaTime;
+        } else if (Input.GetKeyDown(KeyCode.Mouse0)) {
+            timer = 2f;
             Shoot();
         }
 	}
