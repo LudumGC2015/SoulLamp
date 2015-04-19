@@ -25,6 +25,15 @@ public class HurtController : MonoBehaviour {
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "ETERNALDEATH")
+        {
+            soulCollector.ETERNALDEATH();
+        }
+
+    }
+
 	void Start () {
         audioSource = GetComponent<AudioSource>();
         playerMovement = GetComponent<PlayerMovement>();

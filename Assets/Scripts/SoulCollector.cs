@@ -30,6 +30,11 @@ public class SoulCollector : MonoBehaviour
         }
     }
 
+    public void ETERNALDEATH()
+    {
+        ChangeSouls(-currentSouls);
+    }
+
     public void ChangeSouls(int amount)
     {
         currentSouls += amount;
