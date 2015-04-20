@@ -1,0 +1,110 @@
+fileFormatVersion: 2
+guid: bb7d207edde935a428c700b06d0e5a7b
+timeCreated: 1429457394
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Enemy_Death_Sprite_0
+    21300002: Enemy_Death_Sprite_1
+    21300004: Enemy_Death_Sprite_2
+    21300006: Enemy_Death_Sprite_3
+    21300008: Enemy_Death_Sprite_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Enemy_Death_Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 31
+        width: 77
+        height: 98
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy_Death_Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 29
+        width: 115
+        height: 125
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy_Death_Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 26
+        width: 110
+        height: 143
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy_Death_Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 26
+        width: 110
+        height: 125
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Enemy_Death_Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 29
+        width: 78
+        height: 97
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
