@@ -27,7 +27,7 @@ public class RayLightController : MonoBehaviour {
             lights.Add(lightObject);
             if (lights.Count != 3)
             {
-                soulCollector.ChangeSouls(-1);
+                soulCollector.substractSouls(1);
             }
         }
 

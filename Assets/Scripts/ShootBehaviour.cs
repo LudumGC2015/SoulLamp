@@ -30,7 +30,7 @@ public class ShootBehaviour : MonoBehaviour {
         GameObject bul = Instantiate(bullet, transform.position, Quaternion.Euler(0f, transform.eulerAngles.y, 0f)) as GameObject;
         Debug.Log(gameObject);
         Physics2D.IgnoreCollision(bul.GetComponent<Collider2D>(), transform.parent.GetComponent<Collider2D>());
-        soulCollector.ChangeSouls(-1);
+        soulCollector.substractSouls(1);
         audioSource.Play();
     }
 }
