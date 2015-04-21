@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SceneTransition : MonoBehaviour {
+public class SceneController : MonoBehaviour {
 
     public string nextScene;
 
