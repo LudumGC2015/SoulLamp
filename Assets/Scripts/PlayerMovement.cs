@@ -10,10 +10,14 @@ public class PlayerMovement : MonoBehaviour {
     private Rigidbody2D rigidBody2D;
     private GroundChecker groundChecker;
     private float knockBackTimer = 0f;
+    private AudioSource jumpSound;
+    private Animator animator;
 
     public void Awake() {
         rigidBody2D = GetComponent<Rigidbody2D>();
         groundChecker = GetComponentInChildren<GroundChecker>();
+        jumpSound = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
     }
 
     public void Update() {
@@ -25,8 +29,10 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     private void Jump() {
+        animator.SetBool("isGrounded", groundChecker.isGrounded());
         if (Input.GetKeyDown(KeyCode.Space) && groundChecker.isGrounded()) {
             rigidBody2D.AddForce(Vector2.up * jumpForce);
+            jumpSound.Play();
         }
     }
 
@@ -38,6 +44,7 @@ public class PlayerMovement : MonoBehaviour {
             Flip(0);
         }
         rigidBody2D.velocity = new Vector2(xVelocity * movementSpeed, rigidBody2D.velocity.y);
+        animator.SetFloat("xSpeed", Mathf.Abs(xVelocity));
     }
 
     public void OnCollisionEnter2D(Collision2D other) {
