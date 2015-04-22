@@ -2,11 +2,11 @@
 using System.Collections;
 
 public class BulletMovement : MonoBehaviour {
-    public float m_speed;
+    public float speed;
 
 	// Use this for initialization
     void Start() {
-        GetComponent<Rigidbody2D>().velocity = transform.right * m_speed;
+        GetComponent<Rigidbody2D>().velocity = transform.right * speed;
 	}
 
     // Se borra el objeto cuando ya no hace falta dibujarse
@@ -14,16 +14,16 @@ public class BulletMovement : MonoBehaviour {
         Destroy(gameObject);
     }
 
-    void OnTriggerEnter2D(Collider2D coll) {
-        if (coll.gameObject.tag == "Enemy") {
-            coll.gameObject.SendMessage("Kill");
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.tag == "Enemy") {
+            other.gameObject.SendMessage("Kill");
             Destroy(gameObject);
         }
-        if (coll.gameObject.tag == "Brazzier")  {
-            coll.gameObject.SendMessage("Activate");
+        if (other.gameObject.tag == "Brazzier")  {
+            other.gameObject.SendMessage("Activate");
             Destroy(gameObject);
         }
-        if (coll.gameObject.tag == "Ground") {
+        if (other.gameObject.tag == "Ground") {
             Destroy(gameObject);
         }
         

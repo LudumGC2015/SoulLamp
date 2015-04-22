@@ -8,12 +8,13 @@ public class SoulCollector : MonoBehaviour {
 
     private int currentSouls;
     private Animator animator;
-    private AudioSource deadClip;
+    private AudioSource deadClip, getSoulClip;
     
     public void Start() {
         currentSouls = initialSouls;
         animator = GetComponent<Animator>();
         deadClip = GetComponents<AudioSource>()[2];
+        getSoulClip = GetComponents<AudioSource>()[3];
     }
 
     public void OnCollisionEnter2D(Collision2D other) {
@@ -22,6 +23,8 @@ public class SoulCollector : MonoBehaviour {
             CheckDead();
         } else if (other.gameObject.tag == "Soul") {
             currentSouls++;
+            getSoulClip.Play();
+            Destroy(other.gameObject);
         }
     }
 
