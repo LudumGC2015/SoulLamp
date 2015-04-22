@@ -1,18 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LeashController : MonoBehaviour
-{
+public class LeashController : MonoBehaviour {
 
     public PatrolController patrolController;
 
-    void Awake()
-    {
-        patrolController = transform.parent.GetComponent<PatrolController>();
+    void Awake() {
+        patrolController = GetComponentInParent<PatrolController>();
     }
 
-    void OnTriggerExit2D(Collider2D other)
-    {
+    void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.tag == "Player") {
             patrolController.state = PatrolController.State.RETURNING;
         }

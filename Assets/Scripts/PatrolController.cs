@@ -10,21 +10,22 @@ public class PatrolController : MonoBehaviour {
         FOLLOWING,
         RETURNING
     }
-    public float patrolSpeed;
-    public float followSpeed;
+    public float patrolSpeed = 2f;
+    public float followSpeed = 3f;
     public float patrolDistance = 1f;
     private Vector3 patrolStartPosition;
     private Vector3 patrolEndPosition;
     public GameObject player;
     private Rigidbody2D rigidBody;
     public State state;
+    private Vector3 actualVelocity;
 
     public void Start() {
         patrolStartPosition = transform.position;
-        patrolEndPosition = transform.position - new Vector3(1f, 0f, 0f) * patrolDistance;
+        patrolEndPosition = transform.position - Vector3.right * patrolDistance;
         rigidBody = GetComponent<Rigidbody2D>();
         state = State.PATROLLING;
-        rigidBody.velocity = -Vector2.right * patrolSpeed;
+        actualVelocity = -Vector2.right * patrolSpeed;
     }
 
     public void FixedUpdate() {
@@ -36,31 +37,26 @@ public class PatrolController : MonoBehaviour {
         }
         else if (state == State.RETURNING) {
             ReturnToPosition();
-        } 
+        }
+        rigidBody.velocity = actualVelocity;
     }
-    public void TurnAround() {
-        if (transform.rotation.y == 0) {
-            transform.Rotate(0, 180, 0);
-        }
-        else {
-            transform.Rotate(0, -180, 0);
-        }
+    public void Flip() {
+        transform.Rotate(new Vector3(0f,180f, 0f));
     }
     
     private void Patrol() {
         if (transform.position.x >= patrolStartPosition.x) {
-            rigidBody.velocity = -Vector3.right * patrolSpeed;
-            TurnAround();
-        }
-        else if (transform.position.x <= patrolEndPosition.x) {
-            rigidBody.velocity = Vector3.right * patrolSpeed;
-            TurnAround();
+            Flip();
+            actualVelocity = -Vector2.right * patrolSpeed;
+        } else if (transform.position.x <= patrolEndPosition.x) { 
+            Flip();
+            actualVelocity = Vector2.right * patrolSpeed;
         }
     }
 
     private void FollowPlayer() {
-        Vector2 velocity = player.transform.position - transform.position;
-        GetComponent<Rigidbody2D>().velocity = velocity.normalized * followSpeed;
+        float direction = player.transform.position.x - transform.position.x;
+        actualVelocity = new Vector2(direction * followSpeed, rigidBody.velocity.y);
     }
 
     private void ReturnToPosition() {
@@ -69,11 +65,11 @@ public class PatrolController : MonoBehaviour {
             state = State.PATROLLING;
         }
         Vector2 velocity = new Vector2(patrolStartPosition.x - transform.position.x, 0f);
-        GetComponent<Rigidbody2D>().velocity = velocity.normalized * patrolSpeed;
+        actualVelocity = velocity.normalized * patrolSpeed;
         
     }
 
-    public void OnCollider2DStay(Collision2D coll) {
+    public void OnCollider2DEnter(Collision2D coll) {
         if (coll.gameObject.tag == "Edge") {
             Debug.Log("Collided");
             state = State.RETURNING;
