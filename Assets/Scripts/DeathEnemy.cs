@@ -4,7 +4,6 @@ using System.Collections;
 public class DeathEnemy : MonoBehaviour {
     private Rigidbody2D rigidBody;
     private CircleCollider2D circleCollider2D;
-    private SpriteRenderer spriteRenderer;
     private PatrolController patrolController;
     private Animator animator;
     private AudioSource audioSource;
@@ -14,7 +13,6 @@ public class DeathEnemy : MonoBehaviour {
         rigidBody = GetComponent<Rigidbody2D>();
         circleCollider2D = GetComponent<CircleCollider2D>();
         patrolController = GetComponent<PatrolController>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         soulPrefab = Resources.Load("Prefabs/Soul");

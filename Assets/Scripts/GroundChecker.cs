@@ -2,13 +2,10 @@
 using System.Collections;
 
 public class GroundChecker : MonoBehaviour {
-
-    private Rigidbody2D rigidBody;
-    [SerializeField]
+    
     private LayerMask groundMask;
 
     public void Start() {
-        rigidBody = GetComponent<Rigidbody2D>();
         groundMask = LayerMask.GetMask("Ground");
     }
 

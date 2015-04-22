@@ -10,19 +10,21 @@ public class PlayerMovement : MonoBehaviour {
     private Rigidbody2D rigidBody2D;
     private GroundChecker groundChecker;
     private float knockBackTimer = 0f;
-    private AudioSource jumpSound;
+    private AudioSource jumpSound, hurtSound;
     private Animator animator;
+    private bool dead;
 
     public void Awake() {
         rigidBody2D = GetComponent<Rigidbody2D>();
         groundChecker = GetComponentInChildren<GroundChecker>();
-        jumpSound = GetComponent<AudioSource>();
+        jumpSound = GetComponents<AudioSource>()[0];
+        hurtSound = GetComponents<AudioSource>()[1];
         animator = GetComponent<Animator>();
     }
 
     public void Update() {
         knockBackTimer -= Time.fixedDeltaTime;
-        if (knockBackTimer <= 0) {
+        if (knockBackTimer <= 0 && !dead) {
             Move();
             Jump();
         }
@@ -48,7 +50,8 @@ public class PlayerMovement : MonoBehaviour {
     }
 
     public void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.tag == "Enemy") {
+        if (other.gameObject.tag == "Enemy" && !dead) {
+            hurtSound.Play();
             rigidBody2D.velocity = Vector2.zero;
             rigidBody2D.AddForce(-transform.right * knockbackForce);
             knockBackTimer = 0.5f;
@@ -57,5 +60,9 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Flip(float rotation) {
         transform.rotation = Quaternion.Euler(new Vector2(0f, rotation));
+    }
+
+    public void Dead() {
+        dead = true;
     }
 }
